@@ -1,0 +1,72 @@
+.profileWrapper{
+    display: grid;
+
+    grid-template-columns: 1.2fr 2fr;
+}
+
+.secondColumn{
+    padding: 20px;
+}
+
+
+
+
+/* FirstCol*/
+.firstColumn{
+    padding: 20px;
+}
+
+
+
+/* AVA */
+.ava{
+    text-align: center;
+
+    background-color: #dfd2d2;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+}
+
+.ava i{
+    font-size: 200px;
+
+    margin: 10px;
+}
+
+.reductBtn{
+    margin: 3px 0;
+    padding: 3px;
+
+    background-color:#ddbfbf;
+    border-radius: 5px;
+    width: 80%;
+    
+    transition: .3s;
+}
+
+.reductBtn:hover{
+    background-color: #8a7676;
+}   
+
+/* Friends */
+.friends{
+    background-color: #dfd2d2;
+}
+
+.friends h3{
+    margin-left: 20px;
+}
+
+.friends i{
+    font-size: 50px;
+    margin:  5px 10px;
+}
+

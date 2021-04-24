@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 let navData = [
-  {to: "/MyProfile", iconClass: "fas fa-user-alt", nameLink: "Profile"},
+  {to: "/Profile", iconClass: "fas fa-user-alt", nameLink: "Profile"},
   {to: "/Friends", iconClass: "fas fa-users", nameLink: "Friends"},
   {to: "/Messages", iconClass: "far fa-comment-dots", nameLink: "Messages"},
   {to: "/News", iconClass: "far fa-newspaper", nameLink: "News"},

@@ -1,0 +1,49 @@
+.header{
+    grid-area: header;
+
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoContainer{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+    font-size: 36px;
+
+    padding: 10px 100px;
+}
+
+span{
+    margin-left: 10px;
+}
+
+.logoSpan{
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+/* Кабинет */
+
+.myCabinet{
+    display: flex;
+
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.cabinetIcon{
+    background-color:  #ddbfbf;
+    border-radius: 50%;
+
+    font-size: 30px;
+    text-align: center;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

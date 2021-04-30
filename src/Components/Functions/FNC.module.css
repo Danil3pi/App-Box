@@ -3,4 +3,8 @@
 
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+
+    /* Фиксированные размеры */
+    width: 100%;
+    max-height: 200px;
 }

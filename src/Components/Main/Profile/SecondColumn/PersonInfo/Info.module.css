@@ -1,0 +1,44 @@
+.Block{
+    padding: 10px;
+    background-color: #dfd2d2;
+
+    margin-bottom: 10px;
+} 
+
+/* HeaderPerson */
+.headerInfo{
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: solid black 1px;
+    border-radius: 0;
+}
+
+.name{
+    font-size: 18px;
+}
+
+/* BerthDayAndCity */
+
+.BerthDayAndCity div{
+    margin: 10px 0;
+}
+
+.BerthDayAndCity span{
+    margin-left: 20px;
+}
+
+
+/* footer */
+.footerInfo{
+    padding: 0 20px;
+
+    margin-top: 20px;
+}
+
+.innerFooter{
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+}

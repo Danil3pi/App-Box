@@ -1,0 +1,46 @@
+/* AVA */
+.ava{
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+}
+
+.ava i{
+    font-size: 200px;
+
+    margin: 10px;
+}
+
+.reductBtn{
+    margin: 3px 0;
+
+    background-color:#ddbfbf;
+    border-radius: 5px;
+    width: 90%;
+    
+    transition: .3s;
+}
+
+.reductBtn:hover{
+    background-color: #8a7676;
+}   
+
+/* Friends */
+.friends{
+    background-color: #dfd2d2;
+}
+
+.friends h3{
+    margin-left: 20px;
+}
+
+.friends i{
+    font-size: 50px;
+    margin:  5px 10px;
+}

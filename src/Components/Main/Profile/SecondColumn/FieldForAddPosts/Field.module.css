@@ -1,0 +1,13 @@
+/*Textarea*/
+
+.Block{
+    padding: 10px;
+    background-color: #dfd2d2;
+
+    margin-bottom: 10px;
+} 
+
+.inputPost{
+    border-radius: 5px;
+    width: 100%;
+}

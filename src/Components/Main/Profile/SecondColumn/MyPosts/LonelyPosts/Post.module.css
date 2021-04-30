@@ -1,0 +1,13 @@
+.containerForPost{
+    padding: 0 10px;
+
+    background-color: #fff;
+    margin: 7px 0;
+}
+
+.likebtn{
+    border-radius: 50%;
+    margin: 3px;
+
+    font-size: 17px;
+}

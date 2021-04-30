@@ -2,7 +2,7 @@
   display: grid;
 
   grid-template-rows: 1fr auto;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(800px, 3fr) minmax(220px, 1fr);
+  grid-template-columns: minmax(100px, 0.8fr) minmax(500px, 3fr) minmax(100px, 1fr);
 
   grid-template-areas: 
     "header header header"
@@ -13,6 +13,10 @@
 
 .container{
   margin: 0 auto;
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
+}
+
+*{
+  box-sizing: border-box;
 }

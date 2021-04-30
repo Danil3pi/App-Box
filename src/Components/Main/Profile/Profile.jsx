@@ -1,40 +1,25 @@
-import styles from './PRFL.module.css'
+import styles from './PRFL.module.css';
+
+import Friends from './FirstColumn/Friends/Friends.jsx';
+import Ava from './FirstColumn/Ava/Ava.jsx';
+import Info from './SecondColumn/PersonInfo/Info.jsx';
+import MyPosts from './SecondColumn/MyPosts/MyPosts';
+import FieldForAddPosrs from './SecondColumn/FieldForAddPosts/FildForAddposts.jsx';
 
 const Profile = (props) => {
     return (
         <div className={styles.profileWrapper}>
             <div className={styles.firstColumn}>
-                <div className={styles.ava}>
-                    <i class="fas fa-user-tie"></i>
-
-                    <div className={styles.reductBtn}>
-                        Редактировать
-                    </div>
-
-                    <div className={styles.reductBtn}>
-                        Воспоминания
-                    </div>
-
-                    <div className={styles.reductBtn}>
-                        Денежные переводы
-                    </div>
-                </div>
-
-                <div className={styles.friends}>
-                    <h3>Друзья</h3>
-                    <i class="fas fa-user-astronaut"></i>
-                    <i class="fas fa-user-ninja"></i>
-                    <i class="fas fa-user-circle"></i>
-                    <i class="far fa-user"></i>
-                    <i class="fas fa-user-astronaut"></i>
-                    <i class="far fa-user-circle"></i>
-                    <i class="fas fa-user-astronaut"> ... </i>
-                </div>
+                <Ava />
+                <Friends/>
             </div>
 
             <div className={styles.secondColumn}>
-                sdfasdf
+                <Info />
+                <FieldForAddPosrs newTextPost={props.state.newPostText}/>
+                <MyPosts posts={props.state.posts}/>
             </div>
+            
         </div>
     );
 };

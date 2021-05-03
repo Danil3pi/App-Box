@@ -1,10 +1,27 @@
-import state from './redux/state';
-import { reRenderEntireTree } from './render';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import './index.css';
+import App from './App';
+
+import store from './redux/store.js';
 
 
-reRenderEntireTree(state);
+let reRenderEntireTree = (state) => {
+    ReactDOM.render(
+        <Router>
+            <React.StrictMode>
+                <App state={state} addPost={store.addPost.bind(store)} changeNewPostText={store.changeNewPostText.bind(store)}/>
+            </React.StrictMode>
+        </Router>,
+        document.getElementById('root')
+    );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-//reportWebVitals();
+reRenderEntireTree(store.getState());
+
+debugger;
+store.callSubscriber(reRenderEntireTree);
+// Наверное, эта функция вызывается только один раз, в самом начале. Потом в файле store.js reRenderEntireTree становиться равной reRenderEntireTree из этого файла. И она уже выполняется каждый
+// раз, когда необходима отрисовка. 

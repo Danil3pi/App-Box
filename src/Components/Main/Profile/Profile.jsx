@@ -16,7 +16,8 @@ const Profile = (props) => {
 
             <div className={styles.secondColumn}>
                 <Info />
-                <FieldForAddPosrs newTextPost={props.state.newPostText}/>
+                <FieldForAddPosrs newTextPost={props.state.newPostText} addPost={props.addPost}
+                                    changeNewPostText={props.changeNewPostText}/>
                 <MyPosts posts={props.state.posts}/>
             </div>
             

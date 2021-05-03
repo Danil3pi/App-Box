@@ -4,7 +4,7 @@ import styles from './MN.module.css'
 // а нужно ли впихивать сюда Switch или можно оставить его в App.js
 
 import Profile from './Profile/Profile.jsx'
-import addPost from '../../redux/state.js'
+//import addPost from '../../redux/state.js'
 
 const Main = (props) => {
     return (
@@ -13,7 +13,8 @@ const Main = (props) => {
             <Switch>
                 <Route exact path='/'>News</Route>
                 <Route  path='/Profile' render={ () => <Profile state={props.state.ProfilePage}
-                                                                addPost={addPost}/> } 
+                                                                addPost={props.addPost}
+                                                                changeNewPostText={props.changeNewPostText}/> } 
                 />
                 <Route  path='/Friends'>Friends</Route>
                 <Route  path='/Messages'>Messages</Route>

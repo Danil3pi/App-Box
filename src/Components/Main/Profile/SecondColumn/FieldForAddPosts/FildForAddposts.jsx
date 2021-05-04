@@ -12,13 +12,12 @@ const FieldForAddPosts = (props) => {
     const AreaRef = React.createRef();
 
     let ClinkOnAddPost = () => {
-        //debugger; 
-        props.addPost();
+        props.dispatch({type: 'ADD-POST'});
     };
 
     let fieldStateChangind = () => {
-        const text = AreaRef.current.value;
-        props.changeNewPostText(text);
+        const newText = AreaRef.current.value;
+        props.dispatch({type: 'UPGRADE-NEW-POST-TEXT', newText});
     }
 
     return (

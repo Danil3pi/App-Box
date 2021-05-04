@@ -19,36 +19,42 @@ let store = {
 
         ],
     },
+
     _reRenderEntireTree(){
         console.log();
     },
+
     getState(){
         return  this._state;
-    },
-    addPost() {
-        if (this._state.ProfilePage.newPostText !== '') {
-            let addedPost = {
-                text: this._state.ProfilePage.newPostText,
-                likesAmount: 0,
-            };
-
-            this._state.ProfilePage.posts.push(addedPost);
-
-            this._state.ProfilePage.newPostText = '';
-            
-            this._reRenderEntireTree(this._state);
-        }
-    },
-
-    changeNewPostText(newText) {
-        this._state.ProfilePage.newPostText = newText;
-    
-        this._reRenderEntireTree(this._state);
     },
 
     callSubscriber(subscribe){
         this._reRenderEntireTree = subscribe;
-    }
+    },
+
+    dispatch(action) {
+        debugger;
+        switch(action.type) {
+            case 'ADD-POST': {
+                if (this._state.ProfilePage.newPostText !== '') {
+                    let addedPost = {
+                        text: this._state.ProfilePage.newPostText,
+                        likesAmount: 0,
+                    };
+        
+                    this._state.ProfilePage.posts.push(addedPost);
+        
+                    this._state.ProfilePage.newPostText = '';
+                    
+                    this._reRenderEntireTree(this._state);
+                }
+            };break;
+            case 'UPGRADE-NEW-POST-TEXT': {
+                this._state.ProfilePage.newPostText = action.newText;
+                this._reRenderEntireTree(this._state);  
+            }; break;
+        }
+    },
 };
 
 

@@ -12,7 +12,7 @@ let reRenderEntireTree = (state) => {
     ReactDOM.render(
         <Router>
             <React.StrictMode>
-                <App state={state} addPost={store.addPost.bind(store)} changeNewPostText={store.changeNewPostText.bind(store)}/>
+                <App state={state} dispatch={store.dispatch.bind(store)}/>
             </React.StrictMode>
         </Router>,
         document.getElementById('root')
@@ -21,7 +21,6 @@ let reRenderEntireTree = (state) => {
 
 reRenderEntireTree(store.getState());
 
-debugger;
 store.callSubscriber(reRenderEntireTree);
 // Наверное, эта функция вызывается только один раз, в самом начале. Потом в файле store.js reRenderEntireTree становиться равной reRenderEntireTree из этого файла. И она уже выполняется каждый
 // раз, когда необходима отрисовка. 

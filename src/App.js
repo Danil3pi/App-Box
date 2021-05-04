@@ -12,7 +12,7 @@ function App(props) {
       <div className="wrapper">
         <Header />
         <Nav data={props.state.navData} />
-        <Main state={props.state} addPost={props.addPost} changeNewPostText={props.changeNewPostText}/>
+        <Main state={props.state} dispatch={props.dispatch}/>
         <Functions />
       </div>
     </div>

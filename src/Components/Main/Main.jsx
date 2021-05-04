@@ -12,10 +12,7 @@ const Main = (props) => {
 
             <Switch>
                 <Route exact path='/'>News</Route>
-                <Route  path='/Profile' render={ () => <Profile state={props.state.ProfilePage}
-                                                                addPost={props.addPost}
-                                                                changeNewPostText={props.changeNewPostText}/> } 
-                />
+                <Route  path='/Profile' render={ () => <Profile state={props.state.ProfilePage} dispatch={props.dispatch}/> } />
                 <Route  path='/Friends'>Friends</Route>
                 <Route  path='/Messages'>Messages</Route>
                 <Route  path='/News'>News</Route>
